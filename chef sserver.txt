@@ -1,0 +1,27 @@
+#chef-server-ctl user-create USER_NAME FIRST_NAME LAST_NAME EMAIL 'PASSWORD' --filename FILE_NAME
+
+
+chef-server-ctl user-create admin Admin User admin@localhost.com 'admin123' --filename /opt/admin.pem
+
+
+#chef-server-ctl org-create short_name 'full_organization_name' --association_user user_name --filename ORGANIZATION-validator.pem
+
+chef-server-ctl org-create student 'Student_project' --association_user admin 
+
+
+
+1. creating oraganization.
+
+chef-server-ctl org-create wellsfargo 'dsm' --association_user admin
+
+2.go to chef server, login as 'admin'/admin123
+
+3.onto your left hand side, you will have "organization" that created by you -->dsm
+
+4.select organization "wellsfargo" --> onto your left hand side ---setting---download the starter kit and upload{use ftp/winscp) it to workstation
+
+to have communication from workstation to chef server
+
+"knife" is the utility/command we use to communicate from workstation to chef server
+
+
