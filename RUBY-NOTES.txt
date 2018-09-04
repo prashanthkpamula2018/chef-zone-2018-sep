@@ -1,0 +1,145 @@
+Chef-ruby
+---------
+google: chef ruby
+
+https://docs.chef.io/ruby.html
+
+
+Verify Syntax
+--------------
+
+$ ruby -c my_cookbook_file.rb
+to return:
+
+Syntax OK
+
+Comments
+--------
+Use a comment to explain code that exists in a cookbook or recipe. Anything after a # is a comment.
+
+# This is a comment.
+
+
+True: it is like $? in shell
+----
+truth,untruth rare use
+
+
+Array:-
+------
+to store multiple values in single variable is called array.
+it is like list in python.
+
+
+x = ['a', 'b', 'c'] 
+x[0]
+x[1]
+x[2]
+
+using function accessing array values
+--------------
+x.first
+x.second
+
+downcase
+-------
+x.downcase
+
+upcase
+------
+x.upcase
+
+
+Whitespace Arrays
+------------------
+lets say you have data like below and b/w the data elements delimiter is ',' comma.
+in this case we use this by %w
+x = ['a', 'b', 'c'] 
+
+
+white space array each loop
+---------------------------
+#defining whitespace array
+%w{ram,raju,rahim}.each do |name|
+	puts "Hello#{name}"	
+#whiespace array ends with end keyword
+end
+
+o/p:- Hello,ram,raju,rahim
+
+#1.accessing each element by each loop
+#2.each value storing it in variable called name(first name i get ram,2nd i get ramu and 3rd rahim in loop)
+3.
+
+notes:- to install multiple packages with cookbook we go with each loop and package name will not have delimiter and each loop and whitespace array helps.
+
+
+Hash
+---
+A Hash is a list with keys and values. it is same like dictionary in python.
+Sometimes hashes don’t have a set order:
+
+h = {
+  'first_name' => 'Bob',
+  'last_name'  => 'Jones'
+}
+And sometimes they do. For example, first name then last name:
+
+h.keys              # => ["first_name", "last_name"]
+h['first_name']     # => "Bob"
+h['last_name']      # => "Jones"
+h['age'] = 23
+h.keys              # => ["first_name", "age", "last_name"]
+h.values            # => ["Jones", "Bob", 23]
+
+
+Regular Expressions
+--------------------
+try doing this in ruby commnad line,ruby.
+
+'a' == 'a'
+o/p : tru
+
+'a' == 'b'
+false
+
+'a' != 'b'
+0/p:- true
+
+checking I position
+--------------------
+try doing this in ruby commnad line,ruby.
+
+'I believe'  =~ /I/ 
+o/p : 0
+
+
+Statements (if or case)
+-----------------------
+
+
+call a method or in buit funtion
+---------------------------------
+Call a method on something with .method_name():
+
+example ruby script.
+
+#start of method and method name is ADD_these and variables are x,y
+
+def ADD_THESE(x,y)
+        puts x+y
+#method closes with end keyword
+end
+
+ADD_THESE(199,20)
+
+
+
+Ruby Class:-
+-----------
+is a group of methods
+
+
+
+
+
