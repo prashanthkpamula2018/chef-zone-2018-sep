@@ -1,6 +1,0 @@
-chef node
---------
-
-#To pull configuration from chef server instead waiting for convergation
-
-chef-client
