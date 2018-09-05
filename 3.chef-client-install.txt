@@ -4,6 +4,8 @@
 knife bootstrap -i devops.pem ec2-user@chefnode1 -N chefnode1 --sudo
 			  hostname    hostname			 telling to use root access to 
 
+knife bootstrap -i devops.pem ec2-user@chef-client -N chef-client --sudo
+
 
 
 

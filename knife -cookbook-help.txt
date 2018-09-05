@@ -1,0 +1,48 @@
+knife cookbook
+FATAL: Cannot find subcommand for: 'cookbook'
+Available cookbook subcommands: (for details, knife SUB-COMMAND --help)
+
+** COOKBOOK COMMANDS **
+knife cookbook bulk delete REGEX (options)
+Usage: /usr/bin/knife (options)
+knife cookbook delete COOKBOOK VERSION (options)
+knife cookbook download COOKBOOK [VERSION] (options)
+knife cookbook list (options)
+knife cookbook metadata COOKBOOK (options)
+knife cookbook metadata from FILE (options)
+knife cookbook show COOKBOOK [VERSION] [PART] [FILENAME] (options)
+knife cookbook test [COOKBOOKS...] (options)
+knife cookbook upload [COOKBOOKS...] (options)
+
+
+
+To generate a cookbook
+======================
+chef generate cookbook httpd
+
+above command should run inside chefdk
+
+you will get below content when you generate
+drwxr-xr-x 2 root root   24 Feb  4  2018 attributes
+-rw-r--r-- 1 root root   77 Feb  3  2018 Berksfile
+-rw-r--r-- 1 root root 1133 Feb  3  2018 chefignore
+drwxr-xr-x 2 root root   50 Feb  3  2018 files
+-rw-r--r-- 1 root root   70 Feb  3  2018 LICENSE
+-rw-r--r-- 1 root root  747 Feb  3  2018 metadata.rb
+-rw-r--r-- 1 root root   53 Feb  3  2018 README.md
+drwxr-xr-x 2 root root   24 Feb  4  2018 recipes
+drwxr-xr-x 3 root root   40 Feb  3  2018 spec
+drwxr-xr-x 3 root root   19 Feb  3  2018 test
+
+
+metadata.rb:-it will have maintainer name & cookbook name and version
+
+/home/ec2-user/chef-repo/cookbooks/httpd/recipes
+[ec2-user@chefdk recipes]$ ll
+total 4
+-rw-r--r-- 1 root root 1054 Feb  4  2018 default.rb
+
+default.rb:- this is default recipe and inside this we write resources
+
+
+
